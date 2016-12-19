@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Abril</title>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="images/header.jpg" class="center">
+    </div>
+    <div class="container">
+        <div id="telaInicial" class="row tela-abril">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h3 class="green-title">Entre</h3>
+                <form class="form-abril">
+                    <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="E-mail / CPF / CNPJ">
+                    <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Senha">
+                    <a id="esqueceu" class="align-right" href="#">Esqueceu a senha?</a>
+                    <div class="captcha">
+                        <img src="images/nocaptcha.gif">
+                    </div>
+                    <button type="button" class="btn btn-success btn-lg btn-block">Entre</button>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h3 class="orange-title">Novo por aqui? Cadastre-se</h3>
+                <form class="form-abril">
+                    <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="E-mail / CPF / CNPJ">
+                    <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Senha">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Desejo receber notificações de ofertas.
+                        </label>
+                    </div>
+                    <button id="cadastro" type="button" class="btn btn-warning btn-lg btn-block">Cadastro</button>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h3 class="blue-title">Utilize sua conta social</h3>
+                <form class="form-abril">
+                    <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook" aria-hidden="true"></i> Entrar com facebook</button>
+                </form>
+            </div>
+        </div>
+        <div id="telaEsqueceuSenha" class="row tela-abril">
+            <h3 class="green-title">Recuperar senha</h3>
+            <form class="form-abril">
+                <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="E-mail / CPF / CNPJ">
+                <div class="captcha">
+                    <img src="images/nocaptcha.gif">
+                </div>
+                <button id="recuperar" type="button" class="btn btn-success btn-lg btn-block">Recuperar</button>
+            </form>
+        </div>
+        <div id="telaEmail" class="row tela-abril">
+            <form class="form-abril">
+                <img src="images/abril.png">
+                <p>Olá, usuário,</p>
+                <p>Seus detalhes da Abril</p>
+                <p>Para recuperar seus detalhes de usuário da Abril, basta acessar esse link.</p>
+                <br>
+                <button id="recuperarSenha" type="button" class="btn btn-success btn-lg">Recuperar Senha</button>
+                <br>
+                <br>
+                <p>Se não funcionar, tente inserir esse código (17e235f8e87df16deb) manualmente.</p>
+                <p>Observe que o código expira em três horas. Em seguida, você deverá reenviar a solicitação para alterar seus detalhes.</p>
+                <p>Abril</p>
+            </form>
+        </div>
+        <div id="telaRedefinirSenha" class="row tela-abril">
+            <h3 class="green-title">Redefinir sua senha</h3>
+            <form class="form-abril">
+                <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Senha">
+                <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Repetir Senha">
+                <div class="captcha">
+                    <img src="images/nocaptcha.gif">
+                </div>
+                <button id="redefinir" type="button" class="btn btn-success btn-lg btn-block">Redefinir</button>
+            </form>
+        </div>
+        <div id="telaSenhaRedefinidaSucesso" class="row tela-abril">
+                <br>
+            <div class="alert alert-success" role="alert">Senha redenida com sucesso!</div>
+        </div>
+        <div id="telaCadastro" class="row tela-abril">
+            <h3 class="orange-title">Formulário de cadastro</h3>
+            <form class="form-abril">
+                <div class="btn-group btn-group-lg group-tipo" role="group" aria-label="...">
+                    <button id="opcaoCPF" type="button" class="btn btn-warning active">Pessoa Física CPF</button>
+                    <button id="opcaoCNPJ" type="button" class="btn btn-warning btn-gray">Pessoa Jurídica CNPJ</button>
+                </div>
+                <div class="col-md-12">
+                    <input type="email" class="form-control" placeholder="E-mail (preenchido na tela anterior)*">
+                </div>
+                <div class="col-md-6">
+                    <input type="password" class="form-control" placeholder="Senha">
+                </div>
+                <div class="col-md-6">
+                    <input type="password" class="form-control" placeholder="Repetir Senha">
+                </div>
+                <!-- CPF -->
+                <div class="col-md-12 cpf-only">
+                    <input type="text" class="form-control" placeholder="Nome Completo (preenchido na tela anterior)*">
+                </div>
+                <div class="col-md-6  cpf-only">
+                    <input type="text" class="form-control" placeholder="CPF">
+                </div>
+                <div class="col-md-6 cpf-only">
+                    <input type="text" class="form-control" placeholder="Sexo">
+                </div>
+                <div class="col-md-12 cpf-only">
+                    <input type="date" class="form-control" placeholder="Data Nascimento*">
+                </div>
+                <!-- CNPJ -->
+                <div class="col-md-12 cnpj-only">
+                    <input type="text" class="form-control" placeholder="Razão Social">
+                </div>
+                <div class="col-md-6  cnpj-only">
+                    <input type="text" class="form-control" placeholder="CPNJ">
+                </div>
+                <div class="col-md-6 cnpj-only">
+                    <input type="text" class="form-control" placeholder="Inscrição Estadual (* se flag)">
+                </div>
+                <div class="col-md-6">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Contribuinte ICMS
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Isento Inscroção Estadual
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12 cnpj-only">
+                    <input type="text" class="form-control" placeholder="Nome Completo (preenchido na tela anterior)*">
+                </div>
+                <div class="col-md-6 cnpj-only">
+                    <input type="text" class="form-control" placeholder="Sexo">
+                </div>
+                <div class="col-md-6 cnpj-only">
+                    <input type="text" class="form-control" placeholder="Data Nascimento*">
+                </div>
+                <!--  -->
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Telefone Contato">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Telefone Celular">
+                </div>
+                <div class="col-md-6">
+                    <input id="cep" type="text" class="form-control" placeholder="CEP">
+                </div>
+                <div class="if-cep">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Tipo de Endereço">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Apelido">
+                    </div>
+                    <div class="col-md-9">
+                        <input id="rua" type="text" class="form-control" placeholder="Rua">
+                    </div>
+                    <div class="col-md-3">
+                        <input id="numero" type="text" class="form-control" placeholder="Número">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Complemento">
+                    </div>
+                    <div class="col-md-12">
+                        <input id="bairro" type="text" class="form-control" placeholder="Bairro">
+                    </div>
+                    <div class="col-md-6">
+                        <input id="cidade" type="text" class="form-control" placeholder="Cidade">
+                    </div>
+                    <div class="col-md-6">
+                        <input id="estado" type="text" class="form-control" placeholder="Estado">
+                    </div>
+                    <div class="col-md-12">
+                        <input id="pais" type="text" class="form-control" placeholder="Pais">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Referencia">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Dica de Entrega">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Desejo receber notificações de ofertas (receber valor da tela anterior LEAD).
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Desejo receber ofertas de Parceiros
+                        </label>
+                    </div>
+                </div>
+                <div class="captcha">
+                    <img src="images/nocaptcha.gif">
+                </div>
+                <button type="button" class="btn btn-warning btn-lg btn-block">Cadastrar</button>
+                <p>Ao se cadastrar, o usuário está de acordo com o nosso termo de aceite e a nossa política de segurança</p>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <img src="images/footer.jpg" class="center">
+    </footer>
+    <!--  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script> -->
+    <script src='js/jquery.min.js'></script>
+    <script src='js/script.js'></script>
+</body>
+
+</html>

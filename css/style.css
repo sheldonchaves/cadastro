@@ -1,0 +1,87 @@
+html {
+    position: relative;
+    min-height: 100%
+}
+
+body {
+    margin-bottom: 60px
+}
+
+
+/*********************************/
+
+.footer {
+    /*position: absolute;
+    bottom: 0;*/
+    width: 100%;
+    height: 100px;
+    margin-top: 160px;
+}
+
+.container {
+    width: auto;
+    max-width: 1366px;
+    padding: 0 15px
+}
+
+.container .text-muted {
+    margin: 20px 0
+}
+
+
+/*********************************/
+
+.btn-gray{
+	background: #ccc;
+	border-color: #9d9d9d;
+}
+
+.center {
+    margin: 0 auto;
+    display: block;
+}
+
+.group-tipo {
+    margin: 20px auto;
+    display: table;
+}
+
+.tela-abril .form-abril {
+    margin: 30px auto 0;
+    max-width: 600px;
+}
+
+.tela-abril .captcha img {
+    display: block;
+    margin: 30px auto;
+}
+
+.tela-abril .align-right {
+    text-align: right;
+    width: 100%;
+    display: block;
+}
+
+.tela-abril h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+}
+
+.tela-abril .green-title {
+    color: #009933;
+}
+
+.tela-abril .blue-title {
+    color: #337ab7;
+}
+
+.tela-abril .orange-title {
+    color: #f93;
+}
+
+.form-abril input[type="email"],
+.form-abril input[type="text"],
+.form-abril input[type="password"] {
+    margin: 10px 0;
+}
